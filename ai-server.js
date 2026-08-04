@@ -94,6 +94,12 @@ app.post('/api/ask-ai', async (req, res) => {
   }
 });
 
+const path = require('path');
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`[ai-server] Digital Enviro AI Tutor proxy running on http://localhost:${PORT}`);
 });
