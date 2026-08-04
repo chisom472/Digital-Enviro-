@@ -34,7 +34,8 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 app.use(cors());
 app.use(express.json({ limit: '200kb' }));
-app.use(express.static(require('path').join(__dirname, '..')));
+const path = require('path');
+app.use(express.static(path.join(__dirname)));
 
 const SYSTEM_PROMPT =
   'You are the Digital Enviro AI Tutor, embedded on a learning site for ' +
@@ -97,7 +98,7 @@ app.post('/api/ask-ai', async (req, res) => {
 const path = require('path');
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
