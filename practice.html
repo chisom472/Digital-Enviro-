@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Playground — Practice Programming Online | Digital Enviro</title>
+<meta name="description" content="Practice coding online for free. Write and run JavaScript, HTML, and CSS live in your browser, and view starter code with sample output for Python, Java, C++, and SQL.">
+<meta name="keywords" content="online code editor, code playground, practice coding online, run javascript online, html css live preview, online compiler, learn to code by doing">
+<link rel="canonical" href="https://digitalenviro.com/practice.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Code Playground — Digital Enviro">
+<meta property="og:description" content="Write and run code live in your browser. Practice JavaScript, HTML, CSS, and explore starter code for more languages.">
+<meta property="og:url" content="https://digitalenviro.com/practice.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="lessons.html" data-page="lessons.html">Lessons</a></li>
+      <li><a href="videos.html" data-page="videos.html">Videos</a></li>
+      <li><a href="practice.html" data-page="practice.html">Playground</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 0 36px;">
+  <div class="container" style="grid-template-columns:1fr;">
+    <div>
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Live code playground</span>
+      <h1>Write it. Run it. <span class="accent">See it work.</span></h1>
+      <p class="hero-lede">JavaScript, HTML, and CSS execute instantly in your browser. Other languages show real starter code with sample output while you learn the syntax.</p>
+    </div>
+  </div>
+</header>
+
+<main class="section" style="padding-top:20px;">
+  <div class="container">
+    <div class="pg-toolbar">
+      <label for="pg-lang" class="visually-hidden">Choose a language</label>
+      <select id="pg-lang" class="pg-select">
+        <option value="javascript">JavaScript (live)</option>
+        <option value="html">HTML (live)</option>
+        <option value="css">CSS (live)</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="sql">SQL</option>
+      </select>
+      <button id="pg-run" class="btn btn-primary" type="button">Run ▶</button>
+    </div>
+
+    <div class="pg-shell">
+      <div class="pg-panel">
+        <div class="pg-panel-head">Editor</div>
+        <textarea id="pg-editor" spellcheck="false" aria-label="Code editor"></textarea>
+      </div>
+      <div class="pg-panel">
+        <div class="pg-panel-head">Output</div>
+        <div id="pg-output" aria-live="polite"></div>
+      </div>
+    </div>
+    <p class="pg-note" id="pg-note"></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/playground.js"></script>
+<script src="js/ai-assistant.js"></script>
+</body>
+</html>

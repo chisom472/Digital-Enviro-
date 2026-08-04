@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Python — Free Lessons for Beginners | Digital Enviro</title>
+<meta name="description" content="Learn Python from scratch: variables, functions, lists and dictionaries, loops, and file handling — the language behind AI, automation, and data science.">
+<meta name="keywords" content="learn python, python for beginners, python tutorial, python functions, python lists, python dictionaries, python course free">
+<link rel="canonical" href="https://digitalenviro.com/lessons/python.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Learn Python — Digital Enviro">
+<meta property="og:description" content="A complete beginner-to-intermediate Python lesson track.">
+<meta property="og:url" content="https://digitalenviro.com/lessons/python.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Python Lessons",
+  "description": "A beginner-to-intermediate Python course covering variables, functions, data structures, loops, and file handling.",
+  "provider": {"@type":"Organization","name":"Digital Enviro","sameAs":"https://digitalenviro.com/"}
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../lessons.html">Lessons</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="../practice.html">Playground</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="../index.html">Home</a> / <a href="../lessons.html">Lessons</a> / Python
+</div>
+
+<header class="container" style="padding:28px 24px 8px;">
+  <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Programming Languages · Beginner to Intermediate</span>
+  <h1 style="margin-top:14px;">Python</h1>
+  <p class="hero-lede">Clean, readable syntax that powers AI, automation, and backend development. This track covers what you need to write real scripts.</p>
+</header>
+
+<main class="section">
+  <div class="container lesson-layout">
+    <aside class="lesson-toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#variables">1. Variables &amp; data types</a></li>
+        <li><a href="#functions">2. Functions</a></li>
+        <li><a href="#lists-dicts">3. Lists &amp; dictionaries</a></li>
+        <li><a href="#control-flow">4. Control flow &amp; loops</a></li>
+        <li><a href="#files">5. Working with files</a></li>
+        <li><a href="#classes">6. Classes &amp; objects</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson-content">
+      <section id="variables">
+        <h2>1. Variables &amp; data types</h2>
+        <p>Python doesn't require you to declare a type — it figures it out from the value.</p>
+        <pre><code>score = 10
+username = "chisom"
+is_active = True
+
+score = score + 5
+print(type(score))     # &lt;class 'int'&gt;
+print(type(username))  # &lt;class 'str'&gt;</code></pre>
+        <p>Core types: <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>, <code>list</code>, <code>dict</code>, <code>tuple</code>, and <code>None</code>.</p>
+        <div class="callout">Try it: paste this into the <a href="../practice.html">playground</a>'s Python mode to see sample output.</div>
+      </section>
+
+      <section id="functions">
+        <h2>2. Functions</h2>
+        <pre><code>def add(a, b):
+    return a + b
+
+def greet(name="friend"):
+    return f"Hello, {name}!"
+
+print(add(2, 3))     # 5
+print(greet("Ada"))  # Hello, Ada!</code></pre>
+        <p>Python supports default arguments, keyword arguments, and returning multiple values as a tuple: <code>return a, b</code>.</p>
+      </section>
+
+      <section id="lists-dicts">
+        <h2>3. Lists &amp; dictionaries</h2>
+        <pre><code>languages = ["Python", "JavaScript", "SQL"]
+languages.append("Java")
+
+user = {
+    "name": "Ada",
+    "role": "developer",
+    "skills": languages
+}
+
+print(user["name"])          # Ada
+print(len(languages))        # 4
+print([l.upper() for l in languages])</code></pre>
+        <p>That last line is a <strong>list comprehension</strong> — a compact way to build a new list from an existing one.</p>
+      </section>
+
+      <section id="control-flow">
+        <h2>4. Control flow &amp; loops</h2>
+        <pre><code>for i in range(3):
+    print("Iteration", i)
+
+nums = [1, 2, 3, 4, 5]
+evens = [n for n in nums if n % 2 == 0]
+
+if evens:
+    print("Found even numbers:", evens)
+else:
+    print("No even numbers")</code></pre>
+      </section>
+
+      <section id="files">
+        <h2>5. Working with files</h2>
+        <pre><code>with open("notes.txt", "w") as f:
+    f.write("Digital Enviro lesson notes\n")
+
+with open("notes.txt", "r") as f:
+    print(f.read())</code></pre>
+        <p>The <code>with</code> statement automatically closes the file when you're done, even if an error happens inside the block.</p>
+        <div class="callout warn">File I/O needs a real Python environment — it won't run in the browser playground.</div>
+      </section>
+
+      <section id="classes">
+        <h2>6. Classes &amp; objects</h2>
+        <pre><code>class Learner:
+    def __init__(self, name, level="beginner"):
+        self.name = name
+        self.level = level
+
+    def greet(self):
+        return f"{self.name} is a {self.level} developer."
+
+ada = Learner("Ada")
+print(ada.greet())</code></pre>
+        <p>Classes bundle data (attributes) and behavior (methods) together — the foundation of object-oriented Python.</p>
+      </section>
+
+      <div class="lesson-pager">
+        <a href="../lessons.html">← Back to all lessons</a>
+        <a href="../practice.html">Practice in the playground →</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="../index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/ai-assistant.js"></script>
+</body>
+</html>

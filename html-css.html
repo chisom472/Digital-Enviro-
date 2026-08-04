@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn HTML &amp; CSS — Free Lessons for Beginners | Digital Enviro</title>
+<meta name="description" content="Learn HTML and CSS from scratch: semantic markup, the box model, Flexbox and Grid layout, and responsive design — with live examples.">
+<meta name="keywords" content="learn html, learn css, html tutorial, css tutorial, flexbox, css grid, responsive design, web development for beginners">
+<link rel="canonical" href="https://digitalenviro.com/lessons/html-css.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Learn HTML & CSS — Digital Enviro">
+<meta property="og:description" content="A complete beginner-to-intermediate HTML and CSS lesson track.">
+<meta property="og:url" content="https://digitalenviro.com/lessons/html-css.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "HTML & CSS Lessons",
+  "description": "A beginner-to-intermediate HTML and CSS course covering semantic markup, the box model, and modern layout systems.",
+  "provider": {"@type":"Organization","name":"Digital Enviro","sameAs":"https://digitalenviro.com/"}
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../lessons.html">Lessons</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="../practice.html">Playground</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="../index.html">Home</a> / <a href="../lessons.html">Lessons</a> / HTML &amp; CSS
+</div>
+
+<header class="container" style="padding:28px 24px 8px;">
+  <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Web Development · Beginner to Intermediate</span>
+  <h1 style="margin-top:14px;">HTML &amp; CSS</h1>
+  <p class="hero-lede">Every web page starts here: structure with HTML, style and layout with CSS. This track builds up to full responsive pages.</p>
+</header>
+
+<main class="section">
+  <div class="container lesson-layout">
+    <aside class="lesson-toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#structure">1. HTML document structure</a></li>
+        <li><a href="#semantic">2. Semantic elements</a></li>
+        <li><a href="#box-model">3. The CSS box model</a></li>
+        <li><a href="#flexbox">4. Flexbox</a></li>
+        <li><a href="#grid">5. CSS Grid</a></li>
+        <li><a href="#responsive">6. Responsive design</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson-content">
+      <section id="structure">
+        <h2>1. HTML document structure</h2>
+        <p>Every HTML page follows the same skeleton: a doctype, a <code>head</code> for metadata, and a <code>body</code> for visible content.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <div class="callout">Try it: paste this into the <a href="../practice.html">playground</a>'s HTML mode and watch it render live.</div>
+      </section>
+
+      <section id="semantic">
+        <h2>2. Semantic elements</h2>
+        <p>Semantic tags describe what content <em>means</em>, not just how it looks — better for accessibility and SEO.</p>
+        <pre><code>&lt;header&gt;Site navigation&lt;/header&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+    &lt;p&gt;Content goes here.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;Copyright info&lt;/footer&gt;</code></pre>
+        <p>Screen readers and search engines both use these tags to understand a page's structure.</p>
+      </section>
+
+      <section id="box-model">
+        <h2>3. The CSS box model</h2>
+        <p>Every element is a box made of content, padding, border, and margin — in that order, from inside out.</p>
+        <pre><code>.card {
+  padding: 20px;        /* space inside the border */
+  border: 1px solid #ccc;
+  margin: 16px;         /* space outside the border */
+  box-sizing: border-box; /* padding & border included in width */
+}</code></pre>
+        <div class="callout warn"><code>box-sizing: border-box</code> is worth setting globally — it makes width calculations far more predictable.</div>
+      </section>
+
+      <section id="flexbox">
+        <h2>4. Flexbox</h2>
+        <p>Flexbox arranges items in a single row or column, distributing space between them.</p>
+        <pre><code>.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}</code></pre>
+        <p>Use Flexbox for navigation bars, button groups, and any one-dimensional layout.</p>
+      </section>
+
+      <section id="grid">
+        <h2>5. CSS Grid</h2>
+        <p>Grid handles two-dimensional layout — rows and columns together.</p>
+        <pre><code>.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .gallery { grid-template-columns: 1fr; }
+}</code></pre>
+        <p>Try both examples in the playground's CSS mode against the sample <code>.box</code> element.</p>
+      </section>
+
+      <section id="responsive">
+        <h2>6. Responsive design</h2>
+        <p>Media queries adapt layout to screen size, and relative units keep things flexible.</p>
+        <pre><code>.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 40px);
+}</code></pre>
+        <p>Design mobile-first: style the small-screen layout by default, then add complexity inside larger <code>min-width</code> media queries.</p>
+      </section>
+
+      <div class="lesson-pager">
+        <a href="../lessons.html">← Back to all lessons</a>
+        <a href="../practice.html">Practice in the playground →</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="../index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/ai-assistant.js"></script>
+</body>
+</html>

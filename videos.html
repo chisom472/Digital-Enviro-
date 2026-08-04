@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Tutorials — Digital Enviro</title>
+<meta name="description" content="Watch free video tutorials on JavaScript, Python, web development, AI and prompt engineering, cyber security, cloud computing, and blockchain development.">
+<meta name="keywords" content="coding video tutorials, learn programming videos, web development videos, AI tutorial videos, cyber security videos, cloud computing tutorials, blockchain tutorials">
+<link rel="canonical" href="https://digitalenviro.com/videos.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Video Tutorials — Digital Enviro">
+<meta property="og:description" content="Free video tutorials covering programming languages, AI, web development, cyber security, cloud, and blockchain.">
+<meta property="og:url" content="https://digitalenviro.com/videos.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="lessons.html" data-page="lessons.html">Lessons</a></li>
+      <li><a href="videos.html" data-page="videos.html">Videos</a></li>
+      <li><a href="practice.html" data-page="practice.html">Playground</a></li>
+      <li class="nav-cta"><a href="practice.html" class="btn btn-primary" style="padding:9px 18px;">Start coding</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding:56px 0 40px;">
+  <div class="container" style="grid-template-columns:1fr;">
+    <div>
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Watch &amp; learn</span>
+      <h1>Video <span class="accent">tutorials</span> for every track.</h1>
+      <p class="hero-lede">Short, focused walkthroughs that pair with the written lessons — filter by topic to find what you need.</p>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="pg-toolbar" role="group" aria-label="Filter videos by topic">
+      <select class="pg-select" id="topic-filter">
+        <option value="all">All topics</option>
+        <option value="webdev">Web Development</option>
+        <option value="ai">AI &amp; Prompt Engineering</option>
+        <option value="languages">Programming Languages</option>
+        <option value="security">Cyber Security</option>
+        <option value="cloud">Cloud Computing</option>
+        <option value="blockchain">Blockchain</option>
+      </select>
+    </div>
+
+    <div class="grid" id="video-grid">
+
+      <article class="card video-card" data-topic="languages">
+        <div class="thumb">▶</div>
+        <h3>JavaScript in 15 minutes</h3>
+        <p>Variables, functions, and the DOM — the fastest path to your first script.</p>
+        <p class="meta">Programming Languages · Beginner · 15 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="languages">
+        <div class="thumb">▶</div>
+        <h3>Python for absolute beginners</h3>
+        <p>Set up Python and write your first program in under 20 minutes.</p>
+        <p class="meta">Programming Languages · Beginner · 18 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="webdev">
+        <div class="thumb">▶</div>
+        <h3>CSS layout: Flexbox vs. Grid</h3>
+        <p>When to reach for each layout system, with live before/after examples.</p>
+        <p class="meta">Web Development · Intermediate · 12 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="ai">
+        <div class="thumb">▶</div>
+        <h3>Writing your first great prompt</h3>
+        <p>The structure behind prompts that consistently get useful output.</p>
+        <p class="meta">AI &amp; Prompt Engineering · Beginner · 10 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="ai">
+        <div class="thumb">▶</div>
+        <h3>How machine learning models learn</h3>
+        <p>A visual walkthrough of training, loss, and prediction.</p>
+        <p class="meta">AI &amp; Machine Learning · Beginner · 14 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="languages">
+        <div class="thumb">▶</div>
+        <h3>SQL joins, visually explained</h3>
+        <p>Inner, left, right, and full joins — with diagrams for each.</p>
+        <p class="meta">Databases · Intermediate · 11 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="security">
+        <div class="thumb">▶</div>
+        <h3>The OWASP Top 10, explained simply</h3>
+        <p>The most common web vulnerabilities and how to avoid them.</p>
+        <p class="meta">Cyber Security · Intermediate · 20 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="cloud">
+        <div class="thumb">▶</div>
+        <h3>Cloud computing in plain English</h3>
+        <p>What "the cloud" actually is, and how apps get deployed to it.</p>
+        <p class="meta">Cloud Computing · Beginner · 13 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="blockchain">
+        <div class="thumb">▶</div>
+        <h3>Blockchain fundamentals</h3>
+        <p>Blocks, hashes, and consensus — how a blockchain actually works.</p>
+        <p class="meta">Blockchain · Beginner · 16 min</p>
+      </article>
+
+      <article class="card video-card" data-topic="languages">
+        <div class="thumb">▶</div>
+        <h3>Java vs. C++: choosing your first typed language</h3>
+        <p>Where each language shines, and how their syntax compares.</p>
+        <p class="meta">Programming Languages · Intermediate · 17 min</p>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/ai-assistant.js"></script>
+<script>
+  document.getElementById('topic-filter').addEventListener('change', function (e) {
+    var val = e.target.value;
+    document.querySelectorAll('#video-grid .video-card').forEach(function (card) {
+      card.style.display = (val === 'all' || card.dataset.topic === val) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

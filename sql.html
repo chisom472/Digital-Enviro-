@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn SQL — Free Lessons for Beginners | Digital Enviro</title>
+<meta name="description" content="Learn SQL from scratch: SELECT statements, filtering, joins, aggregation, and database design — the query language behind almost every application.">
+<meta name="keywords" content="learn sql, sql for beginners, sql tutorial, sql joins, sql select statement, sql aggregate functions, database design, sql course free">
+<link rel="canonical" href="https://digitalenviro.com/lessons/sql.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Learn SQL — Digital Enviro">
+<meta property="og:description" content="A complete beginner-to-intermediate SQL lesson track.">
+<meta property="og:url" content="https://digitalenviro.com/lessons/sql.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "SQL Lessons",
+  "description": "A beginner-to-intermediate SQL course covering queries, filtering, joins, aggregation, and database design.",
+  "provider": {"@type":"Organization","name":"Digital Enviro","sameAs":"https://digitalenviro.com/"}
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../lessons.html">Lessons</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="../practice.html">Playground</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="../index.html">Home</a> / <a href="../lessons.html">Lessons</a> / SQL
+</div>
+
+<header class="container" style="padding:28px 24px 8px;">
+  <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Data &amp; Cloud · Beginner to Intermediate</span>
+  <h1 style="margin-top:14px;">SQL</h1>
+  <p class="hero-lede">The query language behind almost every application's database. This track covers reading, filtering, joining, and aggregating data.</p>
+</header>
+
+<main class="section">
+  <div class="container lesson-layout">
+    <aside class="lesson-toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#select">1. SELECT &amp; filtering</a></li>
+        <li><a href="#sorting">2. Sorting &amp; limiting</a></li>
+        <li><a href="#joins">3. Joins</a></li>
+        <li><a href="#aggregation">4. Aggregation &amp; GROUP BY</a></li>
+        <li><a href="#design">5. Basic database design</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson-content">
+      <section id="select">
+        <h2>1. SELECT &amp; filtering</h2>
+        <pre><code>SELECT name, skill_level
+FROM learners
+WHERE skill_level = 'beginner';</code></pre>
+        <p><code>SELECT</code> chooses columns, <code>FROM</code> chooses the table, and <code>WHERE</code> filters rows. Combine conditions with <code>AND</code> / <code>OR</code>.</p>
+        <div class="callout">Try it: paste this into the <a href="../practice.html">playground</a>'s SQL mode to see sample output.</div>
+      </section>
+
+      <section id="sorting">
+        <h2>2. Sorting &amp; limiting</h2>
+        <pre><code>SELECT name, joined_at
+FROM learners
+ORDER BY joined_at DESC
+LIMIT 5;</code></pre>
+        <p><code>ORDER BY ... DESC</code> gets the newest rows first; <code>LIMIT</code> caps how many rows come back — useful for "top 5" style queries.</p>
+      </section>
+
+      <section id="joins">
+        <h2>3. Joins</h2>
+        <pre><code>SELECT learners.name, courses.title
+FROM learners
+INNER JOIN enrollments ON learners.id = enrollments.learner_id
+INNER JOIN courses ON enrollments.course_id = courses.id;</code></pre>
+        <p><code>INNER JOIN</code> returns only rows that match in both tables. <code>LEFT JOIN</code> keeps every row from the left table even without a match, filling unmatched columns with <code>NULL</code>.</p>
+      </section>
+
+      <section id="aggregation">
+        <h2>4. Aggregation &amp; GROUP BY</h2>
+        <pre><code>SELECT skill_level, COUNT(*) AS total
+FROM learners
+GROUP BY skill_level
+ORDER BY total DESC;</code></pre>
+        <p><code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, and <code>MAX</code> summarize groups of rows. <code>GROUP BY</code> defines what counts as a "group."</p>
+      </section>
+
+      <section id="design">
+        <h2>5. Basic database design</h2>
+        <pre><code>CREATE TABLE learners (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  skill_level TEXT DEFAULT 'beginner'
+);
+
+CREATE TABLE courses (
+  id INTEGER PRIMARY KEY,
+  title TEXT NOT NULL
+);
+
+CREATE TABLE enrollments (
+  learner_id INTEGER REFERENCES learners(id),
+  course_id INTEGER REFERENCES courses(id)
+);</code></pre>
+        <p>Splitting data into separate tables linked by IDs (foreign keys) avoids duplicating information — this is the core idea behind relational database design.</p>
+      </section>
+
+      <div class="lesson-pager">
+        <a href="../lessons.html">← Back to all lessons</a>
+        <a href="../practice.html">Practice in the playground →</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="../index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/ai-assistant.js"></script>
+</body>
+</html>

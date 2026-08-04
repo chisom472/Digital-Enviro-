@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn JavaScript — Free Lessons for Beginners | Digital Enviro</title>
+<meta name="description" content="Learn JavaScript from scratch: variables, functions, arrays and objects, the DOM, and asynchronous code — with runnable examples in every lesson.">
+<meta name="keywords" content="learn javascript, javascript for beginners, javascript tutorial, javascript functions, javascript dom, async javascript, javascript course free">
+<link rel="canonical" href="https://digitalenviro.com/lessons/javascript.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Learn JavaScript — Digital Enviro">
+<meta property="og:description" content="A complete beginner-to-intermediate JavaScript lesson track with runnable examples.">
+<meta property="og:url" content="https://digitalenviro.com/lessons/javascript.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "JavaScript Lessons",
+  "description": "A beginner-to-intermediate JavaScript course covering variables, functions, arrays, objects, the DOM, and async code.",
+  "provider": {"@type":"Organization","name":"Digital Enviro","sameAs":"https://digitalenviro.com/"}
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../lessons.html">Lessons</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="../practice.html">Playground</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="../index.html">Home</a> / <a href="../lessons.html">Lessons</a> / JavaScript
+</div>
+
+<header class="container" style="padding:28px 24px 8px;">
+  <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Programming Languages · Beginner to Intermediate</span>
+  <h1 style="margin-top:14px;">JavaScript</h1>
+  <p class="hero-lede">The language that runs in every browser — and, with Node.js, on servers too. This track takes you from variables to working with real data in the DOM.</p>
+</header>
+
+<main class="section">
+  <div class="container lesson-layout">
+    <aside class="lesson-toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#variables">1. Variables &amp; data types</a></li>
+        <li><a href="#functions">2. Functions</a></li>
+        <li><a href="#arrays-objects">3. Arrays &amp; objects</a></li>
+        <li><a href="#control-flow">4. Control flow &amp; loops</a></li>
+        <li><a href="#dom">5. The DOM</a></li>
+        <li><a href="#async">6. Async JavaScript</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson-content">
+      <section id="variables">
+        <h2>1. Variables &amp; data types</h2>
+        <p>Variables store values you can use and change later. Modern JavaScript uses <code>let</code> for values that change and <code>const</code> for values that don't.</p>
+        <pre><code>let score = 10;
+const username = "chisom";
+
+score = score + 5; // OK — let can change
+// username = "new";  // Error — const can't be reassigned
+
+console.log(typeof score);    // "number"
+console.log(typeof username); // "string"</code></pre>
+        <p>The core data types are numbers, strings, booleans, <code>null</code>, <code>undefined</code>, and objects (which include arrays and functions).</p>
+        <div class="callout">Try it: paste this into the <a href="../practice.html">playground</a> and change the values.</div>
+      </section>
+
+      <section id="functions">
+        <h2>2. Functions</h2>
+        <p>Functions package up reusable logic. Arrow functions are the modern, concise syntax.</p>
+        <pre><code>function add(a, b) {
+  return a + b;
+}
+
+const multiply = (a, b) => a * b;
+
+console.log(add(2, 3));       // 5
+console.log(multiply(4, 5));  // 20</code></pre>
+        <p>Functions can take default parameters and return early:</p>
+        <pre><code>function greet(name = "friend") {
+  if (!name) return "Hello!";
+  return `Hello, ${name}!`;
+}</code></pre>
+      </section>
+
+      <section id="arrays-objects">
+        <h2>3. Arrays &amp; objects</h2>
+        <p>Arrays hold ordered lists. Objects hold key-value pairs.</p>
+        <pre><code>const languages = ["JavaScript", "Python", "SQL"];
+languages.push("Java");
+
+const user = {
+  name: "Ada",
+  role: "developer",
+  skills: languages
+};
+
+console.log(user.name);        // "Ada"
+console.log(languages.length); // 4
+console.log(languages.map(l => l.toUpperCase()));</code></pre>
+        <p><code>.map()</code>, <code>.filter()</code>, and <code>.reduce()</code> are the three array methods you'll reach for most often — they transform data without writing manual loops.</p>
+      </section>
+
+      <section id="control-flow">
+        <h2>4. Control flow &amp; loops</h2>
+        <pre><code>for (let i = 0; i < 3; i++) {
+  console.log("Iteration", i);
+}
+
+const nums = [1, 2, 3, 4, 5];
+const evens = nums.filter(n => n % 2 === 0);
+console.log(evens); // [2, 4]
+
+if (evens.length > 0) {
+  console.log("Found even numbers");
+} else {
+  console.log("No even numbers");
+}</code></pre>
+      </section>
+
+      <section id="dom">
+        <h2>5. The DOM</h2>
+        <p>The Document Object Model lets JavaScript read and change what's on the page.</p>
+        <pre><code>const heading = document.querySelector("h1");
+heading.textContent = "Updated by JavaScript";
+
+document.querySelector("button").addEventListener("click", () => {
+  alert("Button clicked!");
+});</code></pre>
+        <div class="callout warn">The playground's JavaScript mode runs in an isolated sandbox without a real page, so DOM examples are best explored in the HTML/CSS mode instead.</div>
+      </section>
+
+      <section id="async">
+        <h2>6. Async JavaScript</h2>
+        <p>Many operations — fetching data, reading files — take time. <code>async</code>/<code>await</code> makes that code read top-to-bottom instead of nesting callbacks.</p>
+        <pre><code>async function loadUser() {
+  try {
+    const response = await fetch("/api/user");
+    const data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.error("Failed to load:", err.message);
+  }
+}</code></pre>
+        <p>Under the hood, <code>await</code> pauses the function until a <code>Promise</code> resolves, without blocking the rest of the page.</p>
+      </section>
+
+      <div class="lesson-pager">
+        <a href="../lessons.html">← Back to all lessons</a>
+        <a href="../practice.html">Practice in the playground →</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="../index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/ai-assistant.js"></script>
+</body>
+</html>

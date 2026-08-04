@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Java — Free Lessons for Beginners | Digital Enviro</title>
+<meta name="description" content="Learn Java from scratch: syntax, classes and objects, collections, and interfaces — the language behind enterprise software and Android apps.">
+<meta name="keywords" content="learn java, java for beginners, java tutorial, java classes, java collections, object oriented programming, java course free">
+<link rel="canonical" href="https://digitalenviro.com/lessons/java.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Digital Enviro">
+<meta property="og:title" content="Learn Java — Digital Enviro">
+<meta property="og:description" content="A complete beginner-to-intermediate Java lesson track.">
+<meta property="og:url" content="https://digitalenviro.com/lessons/java.html">
+<meta property="og:image" content="https://digitalenviro.com/assets/logo.png">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Java Lessons",
+  "description": "A beginner-to-intermediate Java course covering syntax, object-oriented programming, and collections.",
+  "provider": {"@type":"Organization","name":"Digital Enviro","sameAs":"https://digitalenviro.com/"}
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo.png" alt="Digital Enviro logo">
+      Digital <span class="brand-d">Enviro</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../lessons.html">Lessons</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="../practice.html">Playground</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container breadcrumb">
+  <a href="../index.html">Home</a> / <a href="../lessons.html">Lessons</a> / Java
+</div>
+
+<header class="container" style="padding:28px 24px 8px;">
+  <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Programming Languages · Beginner to Intermediate</span>
+  <h1 style="margin-top:14px;">Java</h1>
+  <p class="hero-lede">A strongly typed, object-oriented language behind enterprise systems and Android apps. This track covers the fundamentals of writing and structuring Java code.</p>
+</header>
+
+<main class="section">
+  <div class="container lesson-layout">
+    <aside class="lesson-toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#syntax">1. Syntax &amp; variables</a></li>
+        <li><a href="#methods">2. Methods</a></li>
+        <li><a href="#classes">3. Classes &amp; objects</a></li>
+        <li><a href="#collections">4. Collections</a></li>
+        <li><a href="#control-flow">5. Control flow &amp; loops</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson-content">
+      <section id="syntax">
+        <h2>1. Syntax &amp; variables</h2>
+        <p>Java is statically typed — you declare a variable's type up front, and it can't change.</p>
+        <pre><code>int score = 10;
+String username = "chisom";
+boolean isActive = true;
+
+score = score + 5;
+System.out.println(score);     // 15
+System.out.println(username);  // chisom</code></pre>
+        <div class="callout">Try it: paste this into the <a href="../practice.html">playground</a>'s Java mode to see sample output.</div>
+      </section>
+
+      <section id="methods">
+        <h2>2. Methods</h2>
+        <pre><code>public class MathUtils {
+  public static int add(int a, int b) {
+    return a + b;
+  }
+}
+
+int result = MathUtils.add(2, 3); // 5</code></pre>
+        <p>A method's signature — name, parameter types, and return type — must match exactly however it's called.</p>
+      </section>
+
+      <section id="classes">
+        <h2>3. Classes &amp; objects</h2>
+        <pre><code>public class Learner {
+  private String name;
+  private String level;
+
+  public Learner(String name, String level) {
+    this.name = name;
+    this.level = level;
+  }
+
+  public String greet() {
+    return name + " is a " + level + " developer.";
+  }
+}
+
+Learner ada = new Learner("Ada", "beginner");
+System.out.println(ada.greet());</code></pre>
+        <p>Java constructors initialize an object's fields when you use <code>new</code>. Fields marked <code>private</code> can only be accessed through the class's own methods.</p>
+      </section>
+
+      <section id="collections">
+        <h2>4. Collections</h2>
+        <pre><code>import java.util.ArrayList;
+import java.util.List;
+
+List&lt;String&gt; languages = new ArrayList&lt;&gt;();
+languages.add("Java");
+languages.add("Python");
+
+for (String lang : languages) {
+  System.out.println(lang);
+}</code></pre>
+        <p><code>ArrayList</code>, <code>HashMap</code>, and <code>HashSet</code> are the collections you'll use most — resizable lists, key-value maps, and unique sets.</p>
+      </section>
+
+      <section id="control-flow">
+        <h2>5. Control flow &amp; loops</h2>
+        <pre><code>for (int i = 1; i &lt;= 3; i++) {
+  System.out.println("Step " + i);
+}
+
+int[] nums = {1, 2, 3, 4, 5};
+for (int n : nums) {
+  if (n % 2 == 0) {
+    System.out.println(n + " is even");
+  }
+}</code></pre>
+      </section>
+
+      <div class="lesson-pager">
+        <a href="../lessons.html">← Back to all lessons</a>
+        <a href="../practice.html">Practice in the playground →</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Digital Enviro. All rights reserved.</span>
+      <a href="../index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/ai-assistant.js"></script>
+</body>
+</html>

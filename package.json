@@ -1,0 +1,16 @@
+{
+  "name": "digital-enviro-ai-server",
+  "version": "1.0.0",
+  "description": "Backend proxy that powers the Digital Enviro AI Tutor widget",
+  "main": "ai-server.js",
+  "scripts": {
+    "start": "node ai-server.js",
+    "dev": "node --watch ai-server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
